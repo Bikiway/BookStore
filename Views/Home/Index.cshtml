@@ -1,8 +1,210 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "BookStore - Sua Livraria Online";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<!-- Hero Section -->
+<section class="hero-section">
+    <div class="container">
+        <div class="hero-content fade-in-up">
+            <h1 class="hero-title">Descubra o Seu Próximo Livro Favorito</h1>
+            <p class="hero-subtitle">
+                Explore a nossa coleção cuidadosamente selecionada de livros que vão transformar a sua leitura.
+                Desde os clássicos intemporais até aos mais recentes.
+            </p>
+            <div class="d-flex justify-content-center gap-3">
+                <a href="@Url.Action("Index", "Books")" class="btn btn-primary">
+                    <i class="fas fa-book"></i>
+                    Explorar Livros
+                </a>
+                <a href="#featured" class="btn btn-outline">
+                    <i class="fas fa-star"></i>
+                    Destaques
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Seção de Estatísticas -->
+<section class="secondary">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col">
+                <div class="fade-in-up">
+                    <h3 class="text-primary">10,000+</h3>
+                    <p class="text-secondary">Livros Disponíveis</p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="fade-in-up">
+                    <h3 class="text-primary">50,000+</h3>
+                    <p class="text-secondary">Leitores Satisfeitos</p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="fade-in-up">
+                    <h3 class="text-primary">24/7</h3>
+                    <p class="text-secondary">Suporte Online</p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="fade-in-up">
+                    <h3 class="text-primary">4.9★</h3>
+                    <p class="text-secondary">Avaliação Média</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Seção de Categorias -->
+<section id="featured" class="py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="fade-in-up">Categorias Populares</h2>
+            <p class="text-secondary fade-in-up">Encontre livros por categoria e descubra novos géneros</p>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card fade-in-up">
+                    <div class="card-body text-center">
+                        <div class="mb-3">
+                            <i class="fas fa-magic fa-3x text-primary"></i>
+                        </div>
+                        <h5 class="card-title">Ficção</h5>
+                        <p class="card-text">Mergulhe em mundos imaginários e histórias cativantes que vão despertar a sua imaginação.</p>
+                        <a href="@Url.Action("Index", "Books")" class="btn btn-primary">Explorar</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card fade-in-up">
+                    <div class="card-body text-center">
+                        <div class="mb-3">
+                            <i class="fas fa-graduation-cap fa-3x text-primary"></i>
+                        </div>
+                        <h5 class="card-title">Educação</h5>
+                        <p class="card-text">Amplie os seus conhecimentos com livros educativos e materiais de estudo de qualidade.</p>
+                        <a href="@Url.Action("Index", "Books")" class="btn btn-primary">Explorar</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card fade-in-up">
+                    <div class="card-body text-center">
+                        <div class="mb-3">
+                            <i class="fas fa-laptop-code fa-3x text-primary"></i>
+                        </div>
+                        <h5 class="card-title">Tecnologia</h5>
+                        <p class="card-text">Mantenha-se atualizado com as últimas tendências em tecnologia e programação.</p>
+                        <a href="@Url.Action("Index", "Books")" class="btn btn-primary">Explorar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Seção de Benefícios -->
+<section class="secondary">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="fade-in-up">Por que Escolher a BookStore?</h2>
+        </div>
+
+        <div class="row">
+            <div class="col-md-3 mb-4">
+                <div class="text-center fade-in-up">
+                    <div class="mb-3">
+                        <i class="fas fa-shipping-fast fa-2x text-primary"></i>
+                    </div>
+                    <h5>Entrega Rápida</h5>
+                    <p class="text-secondary">Receba os seus livros até 2 dias úteis em todo o continente.</p>
+                </div>
+            </div>
+
+            <div class="col-md-3 mb-4">
+                <div class="text-center fade-in-up">
+                    <div class="mb-3">
+                        <i class="fas fa-shield-alt fa-2x text-primary"></i>
+                    </div>
+                    <h5>Compra Segura</h5>
+                    <p class="text-secondary">As suas informações estão protegidas com criptografia de primeira geração.</p>
+                </div>
+            </div>
+
+            <div class="col-md-3 mb-4">
+                <div class="text-center fade-in-up">
+                    <div class="mb-3">
+                        <i class="fas fa-undo fa-2x text-primary"></i>
+                    </div>
+                    <h5>Troca Fácil</h5>
+                    <p class="text-secondary">Não gostou? Troque ou devolva até 30 dias.</p>
+                </div>
+            </div>
+
+            <div class="col-md-3 mb-4">
+                <div class="text-center fade-in-up">
+                    <div class="mb-3">
+                        <i class="fas fa-headset fa-2x text-primary"></i>
+                    </div>
+                    <h5>Suporte 24/7</h5>
+                    <p class="text-secondary">Nossa equipa está sempre pronta para ajudar.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action -->
+<section class="py-5">
+    <div class="container text-center">
+        <div class="fade-in-up">
+            <h2 class="mb-4">Pronto para Começar a sua Jornada?</h2>
+            <p class="text-secondary mb-4">Junte-se a milhares de leitores que já descobriram os seus livros favoritos connosco.</p>
+            <a href="@Url.Action("Index", "Books")" class="btn btn-primary btn-lg">
+                <i class="fas fa-book-open"></i>
+                Começar a Explorar
+            </a>
+        </div>
+    </div>
+</section>
+
+@section Scripts {
+    <script>
+        // Animação de entrada para elementos
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observar todos os elementos com animação
+        document.querySelectorAll('.fade-in-up').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+
+        // Efeito parallax suave no hero
+        // window.addEventListener('scroll', () => {
+        //     const scrolled = window.pageYOffset;
+        //     const hero = document.querySelector('.hero-section');
+        //     if (hero) {
+        //         hero.style.transform = `translateY(${scrolled * 0.5}px)`;
+        //     }
+        // });
+    </script>
+}
